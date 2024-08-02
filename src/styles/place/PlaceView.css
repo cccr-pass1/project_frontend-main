@@ -1,0 +1,79 @@
+/* 헤드 타이틀 부분 */
+.placeview-title {
+  text-align: center;
+}
+.placeview-title h2 {
+  overflow: hidden;
+  font-weight: 800;
+  color: #333;
+  font-size: 36px;
+  letter-spacing: -1px;
+  word-break: keep-all;
+}
+.placeview-title span {
+  font-size: 20px;
+  color: #666;
+}
+
+.plcaeview-heartview {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 20px;
+
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.plcaeview-heartview span {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.plcaeview-heartview p {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+/* 이미지 부분 */
+.placeview-image img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/*---------------------- Content 부분 ------------ */
+.placeview-content {
+  width: 100%;
+  padding: 31px 0 9px;
+  margin-top: 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: #333;
+
+  border-bottom: 2px solid #333;
+}
+.placeview-text {
+  border-bottom: 2px solid #333;
+  padding-top: 15px;
+}
+
+.placeview-text p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: -1px;
+  text-align: justify; /* 텍스트를 양쪽 맞춤으로 정렬 */
+  margin-bottom: 20px; /* 단락 간격을 더 넓게 조정 */
+}
+.placeview-map {
+  text-align: center;
+  padding: 100px 0;
+  border-bottom: 2px solid #333;
+}
+
+.heart-icon {
+  font-size: 28px;
+}

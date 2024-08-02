@@ -1,0 +1,123 @@
+/* 이미지 부분 */
+.localmain-image img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.localmain-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+  text-align: center;
+  gap: 100px;
+}
+.localmain-info h3 {
+  font-weight: bold;
+  padding-top: 10px;
+}
+.localmain-info span {
+  width: 141px;
+}
+.localmain-info span > p {
+  font-size: 20px;
+}
+.localmain-info span:nth-child(2) {
+  font-size: 65px;
+  padding-top: 10px;
+}
+
+/* 지역소개 부분  */
+.localmain-content {
+  width: 100%;
+  padding: 31px 0 9px;
+  margin-top: 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: #333;
+
+  border-bottom: 1px solid #333;
+}
+.localmain-text {
+  border-bottom: 1px solid #333;
+  padding-top: 15px;
+}
+
+.localmain-text p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: -1px;
+  text-align: justify; /* 텍스트를 양쪽 맞춤으로 정렬 */
+  margin-bottom: 20px; /* 단락 간격을 더 넓게 조정 */
+}
+
+/* 로컬메인 관광지 추천 슬라이더 부분  */
+.localmain-slider-main {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.localmain-slider-main img {
+  /* 이미지 크기고정! */
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+}
+
+.localmain-slider-main2 img {
+  /* 이미지 크기고정! */
+  width: 100%;
+  height: 280px;
+  border-radius: 10px 10px 0 0;
+}
+.localmain-slider-text {
+  padding: 15px;
+  text-align: center;
+}
+
+.localmain-slider-text strong {
+  font-size: 1.5em;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.localmain-slider-text p {
+  font-size: 0.9em;
+  color: #777;
+  margin: 0;
+}
+
+/* 여긴 타이틀 구역별 */
+.localmain-swiper-title {
+  width: 100%;
+  color: #333;
+  padding-top: 75px;
+}
+
+.localmain-swiper-title h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+@media (max-width: 760px) {
+  .localmain-info {
+    gap: 0;
+  }
+  .localmain-info span {
+    flex: 1;
+  }
+  .localmain-content h2 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .localmain-slider-main2 img {
+    height: 280px;
+  }
+}

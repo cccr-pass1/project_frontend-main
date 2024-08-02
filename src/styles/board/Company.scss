@@ -1,0 +1,168 @@
+@import '../reset.scss';
+
+.common-nav{
+    align-items: center;
+    margin-bottom: 20px;
+
+        .common-nav-placeTotal{
+            font-weight: 700;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+    
+            .total{
+               span{
+                padding: 0 2px;
+                color: #0a97cd;
+                font-weight: bold;
+                font-size: 24px;
+               }
+            }
+    
+            @media (max-width: 768px) {
+                margin: 20px 0 20px 0;
+                justify-content: center;
+            }
+        }
+
+        .common-nav-writeBtn {
+            .write-btn {
+                width: 100%;
+                &:hover {
+                    background-color: $test4;
+                    border-color: $test4;
+                    color: #fff;
+                }
+            }
+
+            @media (min-width: 768px) {
+                justify-content: end;
+                align-items: center;
+                display: flex;
+            }
+
+            @media (max-width: 768px) {
+               margin-left: 70px;
+               padding: 0px;
+               width: 190px;
+            }
+        }
+
+        .common-nav-locationBtn{
+            @media (min-width: 768px) {
+                justify-content: end;
+                align-items: center;
+                display: flex;
+            }
+
+            @media (max-width: 768px) {
+               margin-left: 20px;
+               padding: 0px;
+               width: 190px;
+            }
+        }
+}
+
+.pepole-icon{
+    width: 40px;
+    height: 40px;
+    color: #939090;
+}
+
+// 카드 내부
+.company-list{
+
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
+
+    .company-card{
+        height: 350px;
+        padding: 0 20px 20px 20px;
+        margin-bottom: 25px;
+        box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, 0.09);
+
+        .body-section1{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+    
+            .body-location{
+                display: flex;
+                background: #D2E0FB;
+    
+                .body-location-name{
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #939090;
+                    padding: 0;
+                    margin: 10px;
+                }
+            }
+    
+            .body-viewCnt {
+                display: flex;
+                align-items: center;
+            
+                .view-icon {
+                    font-size: 1.5em;
+                    margin: 0 7px 0 0; 
+                    color: #939090;
+                }
+            }
+        }
+    
+        .body-section2{
+    
+            .body-title{
+                font-size: 18px;
+                font-weight: bold;
+                margin: 7px 0 7px 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+    
+                @media (min-width: 771px) and (max-width: 1195px) {
+                    .body-title {
+                      max-width: 100px; 
+                    }
+                }
+            }
+        }
+    
+        .body-section3{
+            height: 130px;
+            background: rgba(220, 220, 220, 0.142);
+            border: 1px solid #9494949f;
+            border-radius: 10px; 
+            margin-top: 7px;
+            padding: 10px;
+        }
+        .more-btn{
+            width: 100%;
+            margin-top: 15px;
+            display: block;
+            margin-left: auto; 
+            margin-right: auto; 
+            background:  rgba(152, 141, 141, 0.212);
+            color: #1c1c1c;
+            border: none;
+            
+            &:active {
+                outline: none;
+                background: $test4;
+            }
+
+            &:hover {
+                background-color: $test3; // 호버 시 배경 색상 변경
+                color: #262626; // 호버 시 텍스트 색상 변경
+                border-color: $test2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+      
+    }
+}

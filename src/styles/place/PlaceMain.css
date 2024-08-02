@@ -1,0 +1,184 @@
+/* 제목부분 */
+.place-title {
+  text-align: center;
+  width: 100%;
+}
+.place-title h2 {
+  font-size: 32px;
+  font-weight: 800;
+  font-style: normal;
+  color: #000;
+  line-height: 1.4;
+  letter-spacing: inherit;
+}
+/*  버튼 누를시 바뀌는 지역타이틀 */
+.place-content {
+  position: relative;
+  width: 100%;
+  margin-top: 24px;
+}
+.plcae-content-title {
+  position: relative;
+}
+.plcae-content-title h2 {
+  overflow: hidden;
+  font-weight: 800;
+  color: #333;
+  font-size: 36px;
+  letter-spacing: -1px;
+  word-break: keep-all;
+}
+
+/* 여기부턴 총---건 부터 최신순 라인 CSS */
+.place-total-set {
+  position: relative;
+  width: 100%;
+  padding: 15px 15px 13px;
+  font-weight: 700;
+  border-top: 1px solid #999;
+}
+.place-total-set strong {
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+}
+.place-total-set strong span {
+  padding: 0 2px;
+  color: #0a97cd;
+  font-weight: bold;
+  font-size: 24px;
+}
+.place-btn {
+  position: absolute;
+  top: 21px;
+  right: 0;
+  color: #767676;
+}
+.place-btn button {
+  display: inline-block;
+  padding: 0 15px;
+  font-size: 19px;
+  line-height: 22px;
+}
+.place-link {
+  display: flex;
+  gap: 25px;
+}
+.place-content-item a {
+  position: relative;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.place-content-item a:hover {
+  transform: scale(1.05); /* 예시로 확대하는 효과를 줍니다. */
+}
+
+.place-content-list {
+  position: relative;
+  padding: 5px 0 !important;
+  border-top: 1px solid #e6e6e6;
+}
+
+.place-content-list li {
+  display: flex;
+  position: relative;
+  /* 글간격 페딩 간격 주는거 */
+  padding: 30px 15px !important;
+  border-bottom: 1px solid #e6e6e6;
+}
+.place-content-list .photo {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px 0 0 15px;
+}
+.place-content-list .photo img {
+  /* 이미지 설정 */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.7s ease;
+}
+
+.place-content-info {
+  flex: 1;
+}
+.place-content-info strong {
+  width: 100%;
+  font-weight: bold;
+  font-size: 25px;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 15px;
+  display: block;
+}
+
+.place-content-info .info-location {
+  font-size: 18px;
+  color: #8eaccd;
+  margin-bottom: 40px;
+}
+
+.place-content-info .text {
+  overflow: hidden;
+  /* 디스플레이 웹킷박스를 써서 글자 라인수 조정 */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 1.2;
+  font-size: 15px;
+  color: rgb(104, 143, 143);
+  max-height: 3.6em; /* (행 간격) * (지정한 줄 수) */
+  text-shadow: 1px 1px 2px rgba(2, 2, 2, 0.2); /* 글자 그림자 추가 */
+  padding-right: 20px;
+}
+
+/*  아이콘 부분 */
+.place-heartview {
+  position: absolute;
+  font-size: 17px;
+  right: 10px;
+  top: 10px;
+  color: #8eaccd;
+}
+
+.place-heartview span {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.place-heartview span > p {
+  margin-bottom: 0;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .place-content-list .photo {
+    width: 200px;
+    height: 200px;
+  }
+  .place-content-info .info-location {
+    display: none;
+  }
+  .place-content-info strong {
+    padding-top: 10px;
+  }
+  .place-content-info .text {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    line-height: 1.3;
+    font-size: 15px;
+    color: rgb(104, 143, 143);
+    max-height: 8.5em;
+    text-shadow: 1px 1px 2px rgba(2, 2, 2, 0.2);
+    padding-right: 20px;
+    padding-top: 15px;
+  }
+}

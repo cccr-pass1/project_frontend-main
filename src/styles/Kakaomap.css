@@ -1,0 +1,55 @@
+.kakaomap-title h3 {
+  overflow: hidden;
+  font-weight: 800;
+  color: #333;
+  font-size: 30px;
+  letter-spacing: -1px;
+  word-break: keep-all;
+
+  /* 추가 스타일링 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  text-align: center;
+}
+#findRoadButton {
+  z-index: 9999;
+  position: absolute;
+  bottom: 10px; /* 원하는 값으로 조절하세요 */
+  right: 10px; /* 원하는 값으로 조절하세요 */
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #4caf50; /* 배경색 설정 */
+  color: #fff; /* 글자색 설정 */
+  border: 2px solid #4caf50; /* 테두리 설정 */
+  border-radius: 5px; /* 테두리 둥글게 설정 */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* 호버 효과 애니메이션 설정 */
+}
+/* 버튼 호버 효과 */
+#findRoadButton :hover {
+  background-color: #45a049;
+  color: #fff;
+}
+
+#findRoadButton2 {
+  z-index: 9999;
+  position: absolute;
+  bottom: 10px; /* 원하는 값으로 조절하세요 */
+  right: 10px; /* 원하는 값으로 조절하세요 */
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #4c90af; /* 배경색 설정 */
+  color: #fff; /* 글자색 설정 */
+  border: 2px solid #4e4caf; /* 테두리 설정 */
+  border-radius: 5px; /* 테두리 둥글게 설정 */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* 호버 효과 애니메이션 설정 */
+}

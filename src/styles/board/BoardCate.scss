@@ -1,0 +1,18 @@
+.category {
+  margin: 20px;
+  font-weight: bold;
+  font-size: 1.5em;
+  position: relative;
+  transition: color 0.3s;
+
+  @media (max-width: 768px) {
+    font-size: 19px; 
+  }
+
+  &.active {
+    color: #333; 
+    position: relative;
+    box-shadow: 0 2px 0 0 #8eaccd; 
+  }
+  
+}

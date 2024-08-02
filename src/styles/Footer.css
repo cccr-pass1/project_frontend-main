@@ -1,0 +1,222 @@
+.footer {
+  width: 100%;
+  padding: 37px 0 48px;
+}
+.footer ul {
+  padding-left: 0;
+  /* reset.scss 설정값은 여기선 0으로 푸터 ul전체 */
+}
+
+.wrap-footer {
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+.service {
+  width: 100%;
+}
+
+.inner-service {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .wrap-service {
+  width: 100%;
+} */
+
+.tit_service {
+  display: block;
+  width: 100%;
+  margin-bottom: 28px;
+}
+/* 하단 푸터 이름 */
+.tit_service_name {
+  display: block;
+  font-size: 25px;
+  margin-bottom: 25px;
+  margin-right: 20px;
+}
+
+.list_service {
+  margin-bottom: 28px;
+}
+
+.list_service_item {
+  width: 100%;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.info {
+  width: 100%;
+}
+
+.info-relation-container {
+  width: 100%;
+}
+
+.inner-info {
+  float: left;
+}
+
+.wrap-info {
+  float: left;
+  margin-left: 30px;
+}
+
+.wrap-info:first-child {
+  margin-left: 0;
+}
+
+.tit_info {
+  display: block;
+  width: 100%;
+  font-size: 12px;
+}
+
+.list_info {
+  width: 100%;
+}
+
+.list_info_item {
+  width: 100%;
+  margin-bottom: 14px;
+  font-size: 14px;
+  display: none;
+}
+
+.inner-relation {
+  float: right;
+  height: 42px;
+  border-radius: 24px;
+  background: #eee;
+  border: 0.5px #aaa;
+}
+
+.tit_relation {
+  width: 100%;
+  height: 100%;
+}
+
+.inner-relation .tit_relation a {
+  display: block;
+  padding: 13px 24px;
+  text-align: center;
+}
+
+.wrap-relation {
+  width: 100%;
+}
+
+.list_relation {
+  display: none;
+}
+
+.txt_copyright {
+  display: block;
+  font-size: 12px;
+  color: #888;
+}
+
+/* footer 전역 */
+.screen-out {
+  overflow: hidden;
+  line-height: 0;
+  text-indent: -9999;
+}
+
+/* 푸터 히든처리 */
+.hidden {
+  display: none;
+}
+
+.arrow_icon {
+  width: 35px;
+  height: 35px;
+}
+
+@media (min-width: 761px) and (max-width: 1200px) {
+  /* 761px부터 1200px까지의 화면 크기에 대한 스타일 */
+  .wrap-service2 {
+    width: 100%;
+  }
+  .wrap-footer .service {
+    padding: 50px;
+  }
+  .title {
+    display: flex;
+  }
+}
+
+@media (max-width: 760px) {
+  /* 760px 이하의 화면 크기에 대한 스타일 */
+  .wrap-service,
+  .wrap-service2,
+  .wrap-service3 {
+    width: 100%;
+  }
+
+  .wrap-service2,
+  .wrap-service3 {
+    display: none;
+  }
+
+  .wrap-footer .service {
+    text-align: center;
+  }
+  .txt_copyright {
+    text-align: center;
+  }
+  .list_service {
+    margin-bottom: 0;
+  }
+  .topup-button {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .inner-service {
+    display: block;
+  }
+  .links {
+    margin-top: 20px;
+  }
+  .title .contents_link {
+    display: none;
+  }
+}
+
+/*  백혜윤 - 푸터 디자인 수정 */
+.links {
+  font-size: 25px;
+  color: #797979;
+}
+.links a {
+  margin: 15px;
+}
+
+.contents_link {
+  font-size: 18px;
+  color: #797979;
+  margin-bottom: 20px;
+  display: flex;
+}
+.contents_link a {
+  align-items: center;
+  padding: 0 5px;
+}
+
+@media (min-width: 1000px) {
+  /* 761px 이상 */
+  .title {
+    display: flex;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1000px) {
+  /* 761px부터 1000px까지의 화면 크기에 대한 스타일 */
+  .title {
+    display: block;
+  }
+}

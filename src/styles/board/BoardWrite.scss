@@ -1,0 +1,53 @@
+.boardWrite{
+
+    padding: 200px  50px 0 50px;
+
+    .instructions{
+        width: 700px;
+        height: 200px;
+    
+          @media (max-width: 576px) {
+                padding: 30;
+                width:100%;
+                  }
+    
+        .instructions-explanation{
+    
+            font-size: 25px;
+            padding-top: 10px;
+            padding-bottom: 22px;
+            font-family: "S-Core Dream";
+            font-weight: bold;
+            letter-spacing: -1.7px;
+            color: #333;
+    
+            .instructions-content{
+                padding-bottom: 10px;
+                font-size: 18px;
+            }
+        }
+    }
+    
+    #btn-save{
+        margin-top: 20px;
+    }
+    
+    // 밑줄
+    .underline{
+        margin: 7px 0 7px 0;
+        color: #ede7e746;
+        width: 100%;
+        
+        @media (max-width: 768px) {
+            height: 1px; /* 화면 크기가 작을 때 더 얇은 밑줄로 변경 */
+            margin: 5px;
+        }
+    }
+    
+    #cate{
+    
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+$black100: #010101;
+$black80: rgba(1, 1, 1, 0.8);
+$black60: rgba(1, 1, 1, 0.6);
+$black40: rgba(1, 1, 1, 0.4);
+$black20: rgba(1, 1, 1, 0.2);
+
+$primary100: #247a49;
+$primary80: #3d8b4f;
+$primary60: #559d54;
+
+$bg-lg: #f6faf6;
+$bg-wh: #f9f9f9;
+$bg-chart: #eff7f0;
+
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@500;600&display=swap");
+
+* {
+  font-family: "Hahmlet", serif;
+}

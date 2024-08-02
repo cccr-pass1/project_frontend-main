@@ -1,0 +1,275 @@
+@import '../reset.scss';
+
+.touristSpotView{
+
+  .header {
+    padding-top: 220px;
+    font-size: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .all {
+    padding-top: 50px;
+    font-size: 15px;
+  
+    .bno {
+      font-size: 22px;
+      font-weight: bold;
+    }
+  
+    .title {
+      font-size: 17px;
+      padding: 10px 0 10px 0;
+    }
+  
+    .detail {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: #555;
+      display: flex;
+  
+      .date {
+        margin-right: 20px;
+      }
+  
+      .writer {
+        margin-right: 20px;
+      }
+    }
+  
+    .content {
+      padding: 30px 30px;
+      font-size: 15px;
+      white-space: pre-line; // 줄바꿈
+  
+      @media (max-width: 768px) {
+        padding: 0 0 30px 0;
+      }
+    }
+  
+    .file {
+      display: flex;
+      align-items: stretch;
+      margin: 0;
+      padding: 0;
+      
+      .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f5f5f5;
+        text-align: center;
+        font-family: "S-CoreDream-4Regular";
+        color: #444;
+        height: 60px;
+  
+        p {
+          font-weight: bold;
+          font-size: 13px;
+  
+        }
+  
+        @media (max-width: 768px) {
+          height: 40px;
+        }
+      }
+  
+      .imgFile {
+        display: flex;
+        align-items: center;
+  
+        .uuid {
+          object-fit: cover;
+          border-radius: 10px;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+          color: #565454;
+          font-size: 13px;
+  
+  
+          @media (max-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+          }
+        }
+  
+        @media (max-width: 768px) {
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  
+    // 구분선
+    .line {
+      border-bottom: 1px solid #ccc;
+      width: 100%;
+  
+      @media (max-width: 768px) {
+        height: 1px;
+      }
+    }
+  
+    .line-bold {
+      border-bottom: 2px solid #565454;
+      width: 100%;
+    }
+  
+    // 첨부파일 이미지
+    .attachment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+  
+      @media (max-width: 768px) {
+        .imgs {
+          width: 300px;
+          height: 200px;
+          object-fit: cover;
+        }
+        margin: 10px 0 10px 0;
+      }
+    }
+  }
+  
+  .btn {
+    text-decoration: none;
+    color: $test4;
+    font-weight: bold;
+  }
+  
+  .reply {
+  
+    .comment-count {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    
+      svg {
+        font-size: 1.7em;
+        margin-right: 10px;
+        color: #555;
+      }
+    
+      p {
+        font-size: 20px;
+        margin: 0;
+      }
+    }
+    
+  }
+
+  .reply_div {
+    padding-top: 10px;
+    margin-top: 20px;
+
+    p {
+      margin-bottom: 3px;
+    }
+
+    .reply_write {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      textarea {
+        flex: 1;
+        height: 120px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #555;
+        border-radius: 5px;
+        resize: none;
+      }
+
+      #reply_submit_button {
+        margin-left: 10px;
+        height: 120px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: 1px solid #555;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .reply-list {
+    margin: 10px;
+    flex: 1;
+
+    .comment-count{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      margin-bottom: 10px;
+    
+      svg {
+        font-size: 1.7em; 
+        margin-right: 5px;
+        color: #555;
+      }
+
+      p{
+        font-size: 17px;
+      }
+    }
+
+    .reply-single {
+      margin-bottom: 20px;
+    }
+
+    .nick-name {
+      font-weight: bold;
+    }
+
+    .reply-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+        .reply-content {
+          font-size: 15px;
+          margin: 2px 0 2px 0;
+        }
+
+        .delete-icon {
+          margin-right: 10px;
+          font-size: 20px;
+          color: #555;
+        }
+
+        .time {
+          font-size: 8px;
+        }
+    }
+
+    .no_data {
+      text-align: center;
+      flex-direction: column;
+
+      .emptyIcon {
+        color: $test4;
+        font-size: 50px;
+      }
+      h3 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .moreBtn{
+    margin-top: 10px;
+    padding: 10px;
+    background: $test1;
+    border-radius: 10px;
+  }
+}

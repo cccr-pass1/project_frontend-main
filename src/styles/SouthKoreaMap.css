@@ -1,0 +1,29 @@
+.land {
+  fill: #cccccc;
+  fill-opacity: 1;
+  stroke: white;
+  stroke-opacity: 1;
+  stroke-width: 0.5;
+}
+.landNo {
+  fill: #cccccc;
+}
+.land:hover {
+  fill: #8eaccd;
+  cursor: pointer;
+}
+
+.selected {
+  fill: #8eaccd !important;
+}
+.mapstyle {
+  width: 100%;
+  height: 100%;
+  margin-top: -100px;
+}
+
+@media screen and (max-width: 768px) {
+  .mapstyle {
+    width: 100%;
+  }
+}

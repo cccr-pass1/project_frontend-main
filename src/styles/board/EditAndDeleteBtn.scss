@@ -1,0 +1,26 @@
+@import '../reset.scss';
+
+.boardView-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+    }
+
+    a,
+    button {
+      white-space: nowrap;
+    }
+
+    button:disabled {
+      white-space: nowrap;
+    }
+  }
+  .btn {
+    text-decoration: none;
+    color: $test4;
+    font-weight: bold;
+  }

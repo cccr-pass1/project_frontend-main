@@ -1,0 +1,251 @@
+.header-logo {
+  padding-left: 75px;
+}
+
+.header-main,
+.header-main-all {
+  position: fixed;
+  font-size: 20px;
+  color: white;
+  max-width: 1920px; /* 수정된 부분 */
+  width: 100%; /* 추가된 부분 */
+  z-index: 9998;
+}
+
+.header-main-all {
+  height: 112px;
+  /* 추가된 부분 */
+}
+
+.header-top {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: right;
+  padding-right: 50px;
+  color: white;
+  position: relative;
+  transition: background-color 0.3s ease;
+  z-index: 9999;
+}
+
+.header-category {
+  justify-content: space-between;
+  width: 80%;
+  padding: 0 100px;
+  align-items: center;
+}
+.header-category .active {
+  color: #333; /* 텍스트 색상 변경 */
+  position: relative;
+  border-bottom: 2px solid #8eaccd;
+}
+
+.header-category a:hover {
+  color: #333; /* 텍스트 색상 변경 */
+  position: relative;
+  border-bottom: 2px solid;
+}
+.header-main-icon {
+  font-size: 30px;
+  margin-right: 80px;
+  display: flex;
+  gap: 20px;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.weather-info p {
+  padding-right: 30px;
+  margin-bottom: 0;
+}
+
+.hovered {
+  background-color: white;
+  /* 변경하고자 하는 배경색 */
+  color: black;
+}
+
+/* Header.css 파일 또는 해당하는 스타일 파일에 추가 */
+.header-dark {
+  color: black;
+  background-color: white;
+}
+
+/* (헤더 hidden 처리를 위한 CSS */
+.hidden {
+  display: none;
+}
+
+/* 드롭다운 스타일 수정 */
+.dropdown-menu {
+  background-color: #8eaccd;
+  border: none;
+  border-radius: 0;
+  padding: 10px 0;
+}
+
+.dropdown-item {
+  color: white;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hide dropdown arrow */
+.dropdown-toggle::after {
+  display: none;
+}
+
+.header-category a {
+  transition: background-color 0.6s ease, color 0.6s ease, font-size 0.6s ease;
+  padding: 10px;
+  display: block;
+}
+
+/* 로그인상태 css 부분 */
+.header-main-icon span {
+  font-size: 20px;
+}
+
+.logout span {
+  cursor: pointer;
+}
+
+/* 모바일 화면일 때의 스타일 */
+@media screen and (max-width: 720px) {
+  #pageline {
+    display: none;
+  }
+
+  #mobile-toggle {
+    margin: 0;
+  }
+  /* 로고 이미지 조절 */
+  .header-logo img {
+    /* 모바일 화면일 때 logonew.png 사용 */
+    content: url("../../public/assets/etc/logo.png");
+  }
+  .header-logo {
+    padding-left: 10px;
+  }
+
+  .header-main,
+  .header-main-all {
+    position: fixed;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    width: 100%; /* 추가된 부분 */
+    z-index: 9998;
+  }
+
+  .header-main-all {
+    height: 112px;
+    /* 추가된 부분 */
+  }
+
+  .header-top {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: right;
+    padding-right: 50px;
+    color: white;
+    position: relative;
+    transition: background-color 0.3s ease;
+    z-index: 9999;
+  }
+  .header-main-icon {
+    position: absolute;
+    display: flex;
+    right: 80px;
+    top: 37px;
+    margin-right: 10px;
+  }
+
+  .header-category {
+    width: 100%;
+    padding: 0;
+  }
+  .weather-info p {
+    color: black;
+  }
+
+  .header-top {
+    padding-top: 10px;
+    padding-right: 0;
+    z-index: 9999;
+  }
+  .weather-info {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  #pageline {
+    display: none;
+  }
+
+  #mobile-toggle {
+    margin-right: 15px;
+  }
+  /* 로고 이미지 조절 */
+  .header-logo img {
+    /* 모바일 화면일 때 logonew.png 사용 */
+    content: url("../../public/assets/etc/logo.png");
+  }
+  .header-main,
+  .header-main-all {
+    position: fixed;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    width: 100%; /* 추가된 부분 */
+    z-index: 9998;
+  }
+
+  .header-main-all {
+    height: 112px;
+    /* 추가된 부분 */
+  }
+
+  .header-top {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: right;
+    padding-right: 50px;
+    color: white;
+    position: relative;
+    transition: background-color 0.3s ease;
+    z-index: 9999;
+  }
+
+  .header-main-icon {
+    position: absolute;
+    display: flex;
+    right: 80px;
+    top: 37px;
+    margin-right: 10px;
+  }
+
+  .header-category {
+    width: 100%;
+    padding: 0;
+  }
+
+  .weather-info p {
+    color: black;
+  }
+
+  .header-top {
+    padding-top: 10px;
+    padding-right: 0;
+    z-index: 9999;
+  }
+}

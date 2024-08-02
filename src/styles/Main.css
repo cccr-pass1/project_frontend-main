@@ -1,0 +1,859 @@
+hr {
+  margin: 3rem 0;
+  color: inherit;
+  border: 0;
+  border-top: var(--bs-border-width) solid;
+  opacity: 0.25;
+  width: 100%;
+}
+p {
+  margin-bottom: 0;
+}
+.mainpage {
+  margin-top: 100px;
+  width: 100%;
+}
+.mainpage > h3 {
+  text-align: center;
+  color: #333;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* 메인페이지 와 비디오 구역 구분하려고 Margin */
+#pageline {
+  margin-top: 0px;
+  margin-bottom: 75px;
+  width: 100%;
+}
+
+.section1 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: wheat;
+}
+
+.section1-item1 {
+  flex: 6;
+  background-color: white;
+}
+
+.section1-item2 {
+  flex: 7;
+  background-color: white;
+  text-align: center;
+  /* 제목,지역 가운데 정렬 */
+}
+/* 지역에 따라 이름 변경되는 부분 서울-부산등등  */
+.section1-place > strong {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ea5639;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.section1-place > h3 {
+  font-size: 35px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.section1-headname {
+  position: relative;
+  margin: 0 auto;
+}
+.section1-headname h3 {
+  font-size: 30px;
+  letter-spacing: -1px;
+  padding-bottom: 20px;
+  line-height: 1;
+}
+.section1-headname h3 > strong {
+  font-weight: bold;
+}
+
+.section-place-info {
+  display: flex;
+  padding-left: 0;
+  z-index: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.section-place-info li {
+  width: 48%; /* 조금 여백을 두기 위해 48%로 조절 */
+  margin-bottom: 20px;
+  position: relative;
+  border: 2px solid #ccc; /* 테두리 추가 */
+  border-radius: 15px; /* 테두리를 둥글게 만듦 */
+  overflow: hidden; /* border-radius가 적용되기 위해 overflow 추가 */
+  transition: transform 0.3s; /* 호버 효과를 위한 트랜지션 추가 */
+}
+
+.section-place-info li:hover {
+  transform: scale(1.05); /* 호버 시 크기 확대 */
+  border-color: #d2e0fb;
+}
+
+.place-info {
+  position: relative;
+  width: 100%;
+}
+
+.place-info img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* 이미지가 늘어나지 않고 비율을 유지하며 자름 */
+}
+
+.place-info-text {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 12px;
+  border-radius: 0 0 15px 15px;
+}
+
+.place-info-text strong {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+/* 더보기 버튼 */
+.section-place-more {
+  /* 기본 스타일 */
+  padding: 0 15px;
+  background-color: #d2e0fb; /* 배경색 */
+  color: black;
+  line-height: 40px;
+  float: right;
+
+  text-shadow: #333;
+  border-radius: 5px;
+  /* 호버 효과 */
+  transition: background-color 0.7s ease, color 0.5s ease;
+}
+.section-place-more > span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.section-place-more:hover {
+  background-color: #afc7f7;
+}
+
+/* 지도 부분 CSS */
+
+.section1-item2-title {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.section1-item2-name {
+  font-size: 30px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.place-locations {
+  text-align: center;
+  font-size: 35px;
+  align-items: center;
+
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+.place-locations > p {
+  font-weight: bold;
+  color: #96b3ee;
+  padding-left: 10px;
+}
+.place-locations span {
+  font-weight: bold;
+}
+/* ----------------------------------------------------------------section2 CSS ---------------------------------------------------------------------------- */
+/* 기본 스타일 */
+.section2 {
+  height: 100%;
+  text-align: center;
+}
+.section2 > strong {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ea5639;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.section2 h3 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.section2 img {
+  width: 100%;
+}
+
+.section2-slider-item {
+  position: relative;
+  overflow: hidden; /* 자식 요소의 넘치는 부분을 가려주기 위해 사용 */
+}
+
+.section2-slider-item img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  filter: blur(0);
+  transition: filter 0.7s ease;
+}
+
+.section2-slider-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* 어두운 회색 배경 추가 */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* 부드러운 전환 효과 추가 */
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.section2-slider-item:hover::before {
+  opacity: 1;
+}
+
+.section2-slider-item:hover img {
+  filter: blur(3px); /* 호버 시에 흐림 효과 추가 */
+}
+/* 슬라이더 텍스트 스타일 */
+.section2-slider-text {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 3; /* img에 호버 할때 text 구역이 더 앞으로 나오게 slider-item 보면 z-index : 1 */
+  backdrop-filter: blur(0); /* 초기에는 흐림 효과 없음 */
+  transition: backdrop-filter 0.3s ease; /* 흐림 효과에 대한 부드러운 전환 효과 추가 */
+  color: transparent; /* 초기에 텍스트를 투명하게 설정 */
+}
+
+.section2-slider-item:hover .section2-slider-text {
+  backdrop-filter: blur(3px); /* 호버 시에 흐림 효과 추가 */
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.section2-slider-text strong {
+  font-size: 24px; /* 글씨 크기 확대 */
+}
+
+.section2-slider-text p {
+  margin-bottom: 10px; /* 여백 조절 */
+  font-size: 18px; /* 글씨 크기 확대 */
+}
+.section2-slider-text span {
+  padding-top: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.swiper-pagination {
+  position: static;
+  padding-top: 50px;
+  width: auto;
+}
+
+.swiper-pagination-bullet {
+  width: 20px; /* 원하는 너비 */
+  height: 5px; /* 원하는 높이 */
+  margin: 0 2px; /* 좌우 여백을 조절 */
+  border-radius: 50px; /* 테두리 반경 */
+}
+.swiper-pagination-bullet-active {
+  background-color: #8eaccd; /* 활성화된 페이지네이션 bullet의 배경색 */
+}
+/*  ----------------------------------------------------Section2 축제 부분 끝 ---------------------------------------------------------------------------- */
+/* 섹션3 전체 스타일 */
+.section3 {
+  height: 100%;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.section3 strong {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ea5639;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* 슬라이더 이미지 스타일 */
+.section3-slider-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover; /* 이미지 비율 유지 및 크롭 */
+  border-radius: 15px; /* 이미지에 radius 적용 */
+}
+
+/* 슬라이더 텍스트 스타일 */
+.section3-slider-text {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  z-index: 1;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* 슬라이더 텍스트 강조 스타일 */
+.section3-slider-text strong {
+  font-size: 20px;
+  color: black; /* 강조 색상 */
+}
+
+/* 슬라이더 텍스트 부가 정보 스타일 */
+.section3-slider-text p {
+  margin-bottom: 0;
+  color: #333; /* 부가 정보 색상 */
+}
+
+/* 특산물 더보기 버튼 */
+.section-localfood-more {
+  /* 기본 스타일 */
+  padding: 0 15px;
+  margin: 30px;
+  background-color: #d2e0fb; /* 배경색 */
+  color: black;
+  line-height: 40px;
+
+  text-shadow: #333;
+  border-radius: 5px;
+  /* 호버 효과 */
+  transition: background-color 0.7s ease, color 0.5s ease;
+}
+.section-localfood-more > span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.section-localfood-more:hover {
+  background-color: #afc7f7;
+  color: black;
+}
+
+/* --------------------------------------------------------------section3 부분 끝 -------------------------------------------------------------------------- */
+/* .section4 {
+} */
+.section4 .board-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ea5639;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.board-view {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.board-view-icon {
+  color: #fffef9;
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.board-view span {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/*  여기부터 게시판 구현! */
+.board-section {
+  display: flex;
+}
+
+.board-Company {
+  flex: 1;
+  width: 50%;
+  padding-right: 50px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.board-Company .title {
+  margin-bottom: 30px;
+  text-align: left;
+}
+.board-Company .title p {
+  font-weight: 600;
+  font-size: 35px;
+  color: #333;
+}
+.board-Company .tab-list {
+  margin-bottom: 20px;
+  text-align: left;
+  cursor: pointer;
+}
+.tab-list span {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0;
+  background: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #909090;
+}
+
+.tab-list span.active,
+.tab-list span:hover {
+  color: #5686e0; /* 선택된 지역 및 hover 시 글자 색상 변경 */
+  border-bottom: 2px solid #5686e0; /* 선택된 지역 및 hover 시 밑줄 추가 및 색상 변경 */
+  padding-bottom: 0px; /* 밑줄과 텍스트 간격 조절 */
+}
+.CompanyList {
+  text-align: start;
+}
+.CompanyList ul {
+  padding: 0;
+}
+.CompanyList ul li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.CompanyList ul li a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.CompanyList ul li a:hover {
+  text-decoration: underline;
+}
+.CompanyList ul li a > p {
+  margin: 0;
+  padding: 15px 0;
+  font-weight: 500;
+  font-size: 18px;
+  color: #333;
+}
+.CompanyList .btn {
+  padding: 0;
+  line-height: 40px;
+  position: static;
+  margin-top: 25px;
+}
+.btn.more {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #d2e0fb; /* 배경색 */
+  color: black;
+  text-decoration: none; /* 링크에 있는 기본 밑줄 제거 */
+  border-radius: 5px; /* 둥근 테두리 */
+  transition: background-color 0.3s; /* 배경색 변경 시 부드러운 효과 */
+  padding: 0 15px;
+
+  position: absolute;
+  right: 50px;
+  bottom: 10px;
+}
+.btn.more span {
+  font-weight: bold;
+}
+
+.btn.more:hover {
+  background-color: #afc7f7; /* 마우스 호버 시 배경색 변경 */
+}
+
+.board-Tourisspot {
+  flex: 1;
+  padding-left: 50px;
+  width: 50%;
+}
+
+.board-Tourisspot .title {
+  text-align: left;
+}
+.board-Tourisspot .title p {
+  font-weight: 600;
+  font-size: 35px;
+  color: #333;
+}
+/* 여기부턴 관광지 추천 스와이퍼 CSS */
+.tourisspotList {
+  flex-wrap: wrap;
+  display: flex;
+  position: relative;
+}
+ul.tourisspotList {
+  padding-left: 0;
+}
+.tourisspotList li {
+  margin-right: 100px;
+  padding: 15px 0;
+}
+.tourisspotList li:first-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.tourisspotList li a {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.tourisspotList li a .thumb-wrap {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+.tourisspotList li a .thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  object-fit: cover;
+}
+
+.tourisspotList li a .text-wrap {
+  padding-left: 15px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 5px;
+}
+.text-wrap h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+
+  font-weight: bold;
+  -webkit-line-clamp: 1; /* 표시할 줄 수 */
+  -webkit-box-orient: vertical;
+}
+.text-wrap p {
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow-wrap: break-word;
+  padding-right: 10px;
+}
+
+.text-wrap .viewcnt {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+.text-wrap .viewcnt p {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+
+.board-Tourisspot .swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+}
+
+/* section 4 background  */
+.section4 {
+  position: relative;
+}
+.section4-background {
+  position: absolute;
+  width: 1899px;
+  height: 120.5%;
+  left: -300px;
+  top: -60px;
+  background-color: rgba(215, 229, 202, 0.3); /* rgba로 색상과 투명도 설정 */
+  z-index: -1;
+}
+/* -------------------------------------------------------------section4 부분 끝 ------------------------------------------------------------------------------ */
+@media (min-width: 770px) and (max-width: 1400px) {
+  .text-wrap > h3 {
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 0px;
+  }
+  .section2-slider-item {
+    border-radius: 15px;
+  }
+  .btn.more {
+    float: right;
+    right: 0;
+  }
+  .section4 > h3 {
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .section4-background {
+    height: 122%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .section4-background {
+    height: 119.5%;
+    width: 136%;
+  }
+}
+@media (max-width: 1000px) {
+  .text-wrap > h3 {
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 0px;
+  }
+  .section4 > h3 {
+    padding-bottom: 50px;
+  }
+  .board-section {
+    display: inline;
+  }
+  .board-section .board-Company {
+    width: 100%;
+    border-right: 0;
+  }
+  .board-Tourisspot {
+    padding-top: 50px;
+    padding-left: 0;
+    width: 100%;
+  }
+  .tourisspotList {
+    padding-left: 0;
+  }
+  .board-Tourisspot .swiper-pagination {
+    bottom: -5px;
+    position: relative;
+  }
+
+  .tab-list span {
+    font-size: 18px;
+  }
+  .section2 h3 {
+    font-size: 25px;
+  }
+  .section > h3 {
+    font-size: 25px;
+  }
+  .place-locations p {
+    font-size: 25px;
+  }
+  .place-locations span {
+    font-size: 25px;
+  }
+  .section4-background {
+    height: 112.5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tourisspotList li a {
+    width: 100%;
+  }
+  .text-wrap .viewcnt {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .board-Tourisspot .swiper-pagination {
+    position: relative;
+    width: 100%;
+  }
+  .text-wrap p {
+    padding-right: 20px;
+  }
+  .section2 > h3 {
+    font-size: 25px;
+  }
+  .section3 > h3 {
+    font-size: 25px;
+    padding-bottom: 25px;
+  }
+  .section4 > h3 {
+    font-size: 25px;
+    padding-bottom: 50px;
+  }
+  .text-wrap h3 {
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 0px;
+  }
+  .mainpage {
+    margin-top: 50px;
+  }
+
+  #pageline {
+    margin-bottom: 50px;
+  }
+
+  .section1 {
+    flex-direction: column;
+  }
+
+  .section1-item1,
+  .section1-item2 {
+    flex: 12;
+  }
+
+  /* 더보기버튼 위치 */
+  .section1-item1 a {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+
+  .section1-item1 {
+    order: 2;
+    padding-top: 50px;
+  }
+  .section1-item2 {
+    text-align: center;
+    order: 1;
+  }
+
+  .section-place-info li {
+    padding-top: 20px;
+  }
+
+  /* 여기부턴 축제 섹션 */
+  .section2-slider-item {
+    width: 100%; /* 슬라이더2의 너비를 100%로 설정 */
+    box-sizing: border-box; /* 너비에 padding과 border를 포함 */
+    margin-right: 0; /* 오른쪽 마진 제거 */
+    border-radius: 15px;
+  }
+
+  .section2-slider-text {
+    width: 100%; /* 슬라이더2 텍스트의 너비를 100%로 설정 */
+  }
+
+  .section2-slider-item img {
+    width: 100%; /* 슬라이더2 이미지의 너비를 100%로 설정 */
+    border-radius: 15px;
+  }
+
+  .section2-slider-text p {
+    margin-bottom: 10px; /* 단락 사이의 간격 조정 */
+  }
+
+  .section2-slider-text .section2-item-button {
+    margin-top: 10px; /* 버튼 상단 간격 조정 */
+  }
+
+  /* 반응형에서는 1개의 슬라이드만 표시 */
+  .swiper-container {
+    width: 100%;
+    padding-top: 50px; /* 슬라이더 위 여백 조정 */
+  }
+
+  .swiper-wrapper {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    width: 100%;
+  }
+  .btn.more {
+    position: relative;
+    right: 0;
+  }
+  .tourisspotList li a .text-wrap {
+    padding-left: 12px;
+  }
+  .section4-background {
+    height: 111.5%;
+    width: 168%;
+  }
+  .section1-headname h3 > strong {
+    font-size: 20px;
+  }
+}
+
+/* --------------------------------------------사용안함-------------------------------------------------- */
+
+/*  여기부터 버튼이벤트 (사용 : 메인페이지 - 축제정보 (더보기 버튼)  )  : */
+/* .w-btn-neon2 {
+  position: relative;
+  border: none;
+  min-width: 200px;
+  min-height: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(129, 230, 217, 1) 0%,
+    rgba(79, 209, 197, 1) 100%
+  );
+  border-radius: 1000px;
+  color: darkslategray;
+  cursor: pointer;
+  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.w-btn-neon2:hover {
+  transform: scale(1.2);
+}
+
+.w-btn-neon2:hover::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00ffcb;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+} */

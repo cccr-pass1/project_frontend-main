@@ -1,0 +1,147 @@
+@import '../reset.scss';
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+.touriSpot-cotent{
+    .common-nav{
+        align-items: center;
+        margin-bottom: 20px;
+
+        // 총 _건, 조회수, 좋아요
+            .common-nav-placeTotal{
+                font-weight: 700;
+                font-size: 25px;
+                display: flex;
+                align-items: center;
+        
+                .total{
+                   span{
+                    padding: 0 2px;
+                    color: #0a97cd;
+                    font-weight: bold;
+                    font-size: 24px;
+                   }
+                }
+        
+                @media (max-width: 768px) {
+                    margin: 20px 0 20px 0;
+                    justify-content: center;
+                }
+            }
+
+            .common-nav-writeBtn {
+                .write-btn {
+                    width: 100%;
+                    &:hover {
+                        background-color: $test4;
+                        border-color: $test4;
+                        color: #fff;
+                    }
+                }
+
+                @media (min-width: 768px) {
+                    justify-content: flex-end;
+                    align-items: center;
+                    display: flex;
+                }
+
+                @media (max-width: 768px) {
+                   margin-left: 70px;
+                   padding: 0px;
+                   width: 190px;
+                }
+            }
+
+            .common-nav-locationBtn{
+                @media (min-width: 768px) {
+                    justify-content: flex-end;
+                    align-items: center;
+                    display: flex;
+                }
+
+                @media (max-width: 768px) {
+                    margin-left: 20px;
+                   padding: 0px;
+                   width: 190px;
+                }
+            }
+    }
+
+    .underline{
+        margin: 10px 0 10px 0;
+        color: #fafafaa7;
+        width: 100%;
+        
+        @media (max-width: 768px) {
+            height: 1px; 
+        }
+    }
+
+    .TourisSpot-Card{
+        border: none;
+        padding: 0px;
+
+        .TourisSpot-Imgs{
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+
+            .TourisSpot-Img {
+                width: 100%;
+                height: 180px;
+                border-radius: 10px;
+                object-fit: cover;
+              
+                @media (max-width: 768px) {
+                  width: 400px;  
+                  height: 230px;
+                  margin-bottom:10px;
+                  object-fit: cover;
+                  object-position: center center;
+                }
+            }
+        }
+
+          
+        .content-location{
+            font-size: 20px;
+            font-weight: bold;
+            color: $test4;
+            width: 80px;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        .content-title{
+            font-size: 18px;
+            margin-bottom: 85px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 50px;
+            }
+        }
+
+        .each{
+            .content-viewCnt{
+                p{
+                    text-align: end;
+                }
+                
+            }
+
+            .content-name{
+                p{
+                    text-align: end;
+                }
+            }
+
+            .time{
+                text-align: end;
+            }
+
+                @media (max-width: 768px) {
+                    width: 400px;
+                }
+        }
+    }
+}
+

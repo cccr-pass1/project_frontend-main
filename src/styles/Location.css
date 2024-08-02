@@ -1,0 +1,128 @@
+#location-pageline {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+.location {
+  text-align: center;
+  padding-top: 50px;
+  width: 100%;
+}
+.location hr {
+  margin-bottom: 0;
+  /* 로케이션 hr선은 아래 마진값 0 */
+}
+.location .location-title {
+  font-size: 32px;
+  font-weight: 800;
+  font-style: normal;
+  color: #000;
+  line-height: 1.4;
+  letter-spacing: inherit;
+  width: 100%;
+}
+.location .location-text {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  color: #000;
+  line-height: 1.4;
+  letter-spacing: inherit;
+  width: 100%;
+}
+
+.local-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+}
+.local-area .active {
+  scale: 1.3;
+}
+
+.local-area .active span {
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(2, 2, 2, 0.8); /* 글자 그림자 추가 */
+  font-weight: bold; /* 선택된 카테고리의 텍스트를 굵게 표시 */
+}
+
+.local-area .localcategory {
+  display: inline-block;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+  background: url(../../public/assets/etc/icon_area.png) no-repeat;
+}
+
+.local-area .local-area-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.local-area .서울 {
+  background-position-y: 0;
+}
+.local-area .인천 {
+  background-position-y: -100px;
+}
+.local-area .대전 {
+  background-position-y: -200px;
+}
+.local-area .부산 {
+  background-position-y: -300px;
+}
+.local-area .경기 {
+  background-position-y: -400px;
+}
+.local-area .충청 {
+  background-position-y: -500px;
+}
+.local-area .강원 {
+  background-position-y: -600px;
+}
+.local-area .전라 {
+  background-position-y: -700px;
+}
+.local-area .경상 {
+  background-position-y: -800px;
+}
+
+/* ------------------------------------------------------------ 여기까지 위에 지역별 카테고리 이미지 및 텍스트 정리 ----------------------------------------- */
+/* 화면 너비가 768px 이하일 때 */
+@media (max-width: 768px) {
+  .local-area {
+    flex-wrap: wrap; /* 줄바꿈을 허용하여 세로로 배열되도록 설정 */
+    justify-content: center;
+  }
+
+  .localcategory {
+    width: calc(33.333%); /* 가로 너비 조정 및 간격 추가 */
+    max-width: none; /* 최대 가로 너비 제거 */
+  }
+
+  .local-area .local-area-text {
+    font-size: 14px; /* 텍스트 크기 조정 */
+  }
+
+  /* 다른 반응형 스타일 조정 */
+}
+
+@media (min-width: 761px) and (max-width: 1200px) {
+  .local-area {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .local-area .localcategory {
+    margin: 5px;
+  }
+}

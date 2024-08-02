@@ -1,0 +1,238 @@
+.festival-title {
+  text-align: center;
+  width: 100%;
+}
+.festival-title h2 {
+  font-size: 32px;
+  font-weight: 800;
+  font-style: normal;
+  color: #000;
+  line-height: 1.4;
+  letter-spacing: inherit;
+}
+
+/* 여기 부터 상단 3개 이미지 css */
+.festival-content {
+  position: relative;
+  margin: 0 auto;
+}
+.festival-content-wrap {
+  margin-left: auto;
+  background-color: white;
+}
+.festival-content-wrap ul {
+  height: 380px;
+  padding: 0;
+  display: flex;
+}
+
+.festival-content-wrap li {
+  flex: 1;
+  margin-left: 2%;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.6s ease; /* 부드러운 크기 변경을 위한 transition 추가 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+.festival-content-wrap li:first-child {
+  margin: 0;
+}
+
+.festival-content-wrap li:hover {
+  flex: 1.1 0 auto;
+}
+
+.festival-content-wrap .content a {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  height: 100%;
+  border-radius: 8px;
+}
+.festival-content-wrap .content a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.festival-text-area {
+  position: absolute;
+  left: 7%;
+  top: 66%;
+  width: 90%;
+  margin-left: 0;
+  transform: unset;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+.festival-text-area strong {
+  font-size: 28px;
+  line-height: 36px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+.festival-text-area .festival-text-desc {
+  display: block;
+}
+.festival-text-area .festival-text-desc span {
+  display: block;
+  padding-top: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* 이미지 경로
+.content1 a {
+  background-image: url("../../../public/assets/local/main-board.jpg");
+}
+.content2 a {
+  background-image: url("../../../public/assets/local/main-board2.jpg");
+}
+.content3 a {
+  background-image: url("../../../public/assets/local/main-board3.jpg");
+} */
+
+/* ----------------------------------------------여기 까지가 상단 지역별 축제 상위 3개 --- 아래는 리스트--------------------------------------------------------- */
+.festival-location-name {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 50px;
+}
+.festival-location-name h2 {
+  font-size: 32px;
+  font-weight: 1000;
+  font-style: normal;
+  color: #131212;
+  line-height: 1.4;
+  width: 100%;
+}
+.festival-list-item ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* 요소들을 여러 행에 걸쳐 나열하도록 설정 */
+  padding: 0;
+  justify-content: space-between;
+}
+.festival-list-item li {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.festival-list-item li:hover {
+  transform: scale(1.05);
+}
+
+.festival-list-item ul li {
+  position: relative;
+  height: 350px;
+  margin-right: 2%;
+  border-radius: 8px;
+  isolation: isolate;
+  flex-basis: 23%;
+}
+
+.festival-list-item ul li a {
+  display: block;
+}
+.festival-list-image {
+  position: relative;
+  height: 212px;
+  border-radius: 8px;
+}
+.festival-list-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.festival-text-desc {
+  padding: 0;
+  box-sizing: border-box;
+}
+.festival-text-desc strong {
+  display: -webkit-box;
+  width: 100%;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: break-spaces;
+
+  padding: 14px 0 0 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a24;
+}
+.festival-text-desc .date {
+  padding: 12px 0 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1a1a24;
+  width: 100%;
+  display: block;
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.festival-text-desc .addr {
+  padding-bottom: 32px px;
+  color: #666670;
+  display: block;
+  font-size: 16px;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .festival-list-image {
+    width: 250px;
+  }
+  .festival-text-desc .date {
+    font-size: 12px;
+  }
+
+  /* 리스트 텍스트크기 */
+  .festival-text-desc strong {
+    font-size: 16px;
+  }
+  .festival-text-desc .addr {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 999px) {
+  .festival-list-image {
+    width: 180px;
+  }
+  .festival-text-desc .date {
+    font-size: 10px;
+  }
+  /* 세 번째  항목 숨기기 */
+  .content-list li:nth-child(3) {
+    display: none;
+  }
+  .festival-text-desc strong {
+    font-size: 14px;
+  }
+  .festival-text-desc .addr {
+    font-size: 12px;
+  }
+}
+@media (max-width: 760px) {
+  .content-list li:nth-child(n + 2) {
+    display: none;
+  }
+  .festival-text-title strong {
+    font-size: 23px;
+  }
+  /* 리스트 텍스트크기 */
+  .festival-text-desc strong {
+    font-size: 14px;
+  }
+  .festival-text-desc .addr {
+    font-size: 12px;
+  }
+}

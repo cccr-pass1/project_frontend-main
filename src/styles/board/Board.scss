@@ -1,0 +1,48 @@
+// 검색 
+.search {
+    margin-bottom: 3em;
+
+    .search-btn{
+        width: 60px;
+        height: 40px;
+        border: 1px solid #D2E0FB;
+        border-radius: 20px;
+        background-color: #D2E0FB;
+        color: #000000;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+            background-color: #D2E0FB; 
+            color: #000000;
+        }
+    }
+    @media (max-width: 768px) {
+        width: 350px;
+        padding-top: 5px;
+    }
+}
+
+
+// 구분선
+.underline {
+    border-bottom: 1px solid #9b9b9b;
+    width: 1246px;
+}
+
+// 페이징
+.pagination{
+    margin-top: 30px;
+}
+
+.write-btn {
+    display: block;
+    width: 100%;
+    max-width: 300px; 
+    padding-top: 5px;
+    margin-left: auto;
+    margin-right: auto; 
+
+    @media (max-width: 768px) {
+        width: 300px; 
+    }
+}

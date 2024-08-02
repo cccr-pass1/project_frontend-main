@@ -1,0 +1,557 @@
+@import "reset.scss";
+
+.login {
+  display: flex;
+  .loginform {
+    flex: 6;
+    height: 100vh;
+    position: relative;
+    .inside {
+      .logo {
+        text-align: center;
+        img {width: 100px; margin-bottom: 20px;}
+      }
+      h3 {
+        margin-bottom: 30px;
+      }
+      width: 60%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .grp {
+        margin-bottom: 15px;
+      }
+      .form-label {
+        margin-bottom: 0.3rem;
+      }
+      .form-control {
+        font-size: 0.8rem; border: 1px solid #b5b5b5;
+      }
+      .form-check-input {border: 1px solid #b5b5b5;}
+      .btn {border: 1px solid $test4; background: $test4;}
+
+      .d-grid button {
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+
+      .help {
+        text-align: center;
+        cursor: default;
+        span {
+          color: $test4; font-weight: bold;
+          cursor: pointer;
+        }
+      }
+
+      .loginBtn {margin-top: 10px;}
+    }
+  }
+  .bgimage {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    flex: 6;
+    height: 100vh;
+    background-image: url(../../public/assets/test/loginbg.png);
+    background-size: cover;
+    background-position: center center;
+  }
+
+  hr {
+    margin: 30px 0;
+  }
+
+  .otherlogin {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    .google,
+    .kakao {
+      display: flex;
+      gap: 10px;
+      border: 1px solid #dcdcdd;
+      border-radius: 8px;
+      padding: 3px 15px;
+      align-items: center;
+      font-size: 11px;
+      font-weight: bold;
+      .k-icon img {
+        width: 25px;
+      }
+    }
+  }
+}
+
+.signup {
+  display: flex;
+  .loginform {
+    flex: 6;
+    position: relative;
+    .inside {
+      .logo {
+        text-align: center;
+        img {width: 100px; margin-bottom: 20px;}
+      }
+      h3 {
+        margin-bottom: 30px;
+      }
+      width: 60%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .input-group button {
+        font-size: 0.8rem;
+        background: #b5b5b5;
+        border: 1px solid #b5b5b5;
+        color: black;
+      }
+
+      .grp {
+        margin-bottom: 5px;
+        .success p {color: #41d24d;}
+        .send_progress {height: 7px; margin: 10px 0; 
+        }
+      }
+      .form-label {
+        margin-bottom: 0.2rem;
+      }
+      .form-control {
+        font-size: 0.8rem; border: 1px solid #b5b5b5;
+      }
+      .form-check-input {border: 1px solid #b5b5b5;}
+      .btn {border: 1px solid $test4; background: $test4;}
+
+      .d-grid button {
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+
+      .help {
+        text-align: center;
+        span {
+          color: $test4; font-weight: bold;
+        }
+      }
+    }
+  }
+  .bgimage {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    flex: 6;
+    min-height: 800px;
+    height: 100vh;
+    background-image: url(../../public/assets/test/loginbg.png);
+    background-size: cover;
+    background-position: center center;
+  }
+
+  hr {
+    margin: 30px 0;
+  }
+
+  .otherlogin {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    .google,
+    .kakao {
+      display: flex;
+      gap: 10px;
+      border: 1px solid #dcdcdd;
+      border-radius: 8px;
+      padding: 3px 15px;
+      align-items: center;
+      font-size: 11px;
+      font-weight: bold;
+      .k-icon img {
+        width: 25px;
+      }
+    }
+  }
+  .success {color: #41d24d; font-size: .875em}
+}
+
+@media screen and (max-width: 992px) {
+  .signup {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    .loginform {
+      min-height: 800px;
+    }
+  }
+}
+
+.modalHr {
+  margin: 15px 0;
+}
+.mypage {
+  padding-top: 200px;
+  .board, .reply, .like {cursor: pointer;}
+  .board:hover, .reply:hover, .like:hover {font-weight: bold;}
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  h3.title {margin-bottom: 30px;}
+  .tab {
+    hr {
+      margin: 15px 0;
+      width: 80%;
+    }
+    .tab_inner{
+      width: 30%;
+      font-size: 16px;
+      .icon {font-size: 40px; margin-bottom: 10px; color: purple;}
+      .icon:hover {color: #980098;}
+    }
+  }
+
+  
+  .content {
+    hr {
+      margin: 36px 0 50px 0;
+    }
+    .profile {
+      text-align: center;
+      background: $test3;
+      height: 150px;
+      position: relative;
+
+      .circle {
+        width: 100px;
+        height: 100px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 70px;
+        color: gray;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translate(-5%, -50%);
+      }
+
+      .btn {
+        background: #292f36;
+        border: 1px solid #292f36;
+        font-size: 12px;
+        border-radius: 20px;
+      }
+
+      .inside {
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        transform: translate(-45%, -50%);
+        width: 70%;
+        .greeting {
+          font-size: 20px;
+        }
+        .menu {
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          .btn:hover {background: #7D7D7D; border: 1px solid #7D7D7D;}
+        }
+      }
+    }
+    .withdrawal {
+      text-align: right;
+      a {cursor: pointer; color: #7D7D7D;}
+      // a:hover {font-weight: bold;}
+    }
+    .myrecord {
+      table {
+        border-collapse: collapse;
+        margin: 1rem auto;
+        width: 100%;
+      }
+      th {
+        padding: 10px 0;
+        text-align: center;
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+      }
+      tbody tr:hover {
+        background-color: $test1;
+        cursor: pointer;
+      }
+
+      td {
+        padding: 10px 2px;
+        text-align: center;
+        border-bottom: 1px solid #000;
+      }
+
+      th:nth-child(1),
+      td:nth-child(1) {
+        width: 20%;
+      }
+      td:nth-child(2) {
+        text-align: left;
+      }
+
+      .replylist {
+        th:nth-child(1),
+        td:nth-child(1) {
+          width: 15%;
+        }
+        th:nth-child(2),
+        td:nth-child(2) {
+          width: 30%;
+          padding-right: 10px;
+        }
+        th:nth-child(3),
+        td:nth-child(3) {
+          width: 40%;
+        }
+        th:nth-child(4),
+        td:nth-child(4) {
+          width: 15%;
+        }
+        td:nth-child(3) {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+.no_data {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  text-align: center;
+  margin-bottom: 50px;
+  .emptyIcon {
+    color: $test4;
+    font-size: 50px;
+  }
+  h3 {margin-bottom: 20px;}
+}
+
+@media screen and (max-width: 992px) {
+  .mypage {
+    padding-top: 80px;
+    .tab {
+      justify-content: space-between;
+      div {
+        text-align: center;
+      }
+    }
+    .content {
+      .profile {
+        .inside {
+          .greeting {
+            font-size: 2.4vw;
+          }
+        }
+        .btn {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 382px) {
+  .mypage {
+    .tab {
+      div {
+        text-align: center;
+      }
+    }
+    .content {
+      .profile {
+        .circle {
+          width: 80px; height: 80px;
+          font-size: 50px;
+        }
+        .inside {
+          .greeting {
+            font-size: 3.5vw;
+          }
+        }
+        .btn {
+          font-size: 2.5vw;
+        }
+      }
+    }
+  }
+}
+
+.likecard {
+  margin-bottom: 20px;
+  border: 0;
+  box-shadow: 5px 5px 15px #d3d3d3;
+  .card-body {
+    display: flex;
+    .card-img {width: 20%; object-fit: cover; height: 90px;}
+    .content {
+      width: 75%;
+      margin-left: 20px;
+      .card-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: keep-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+    .h-icon {color: #FF0000; font-size: 20px; margin-left: 10px;}
+  }
+}
+
+.btn_more{
+  text-align: right;
+}
+
+.likecard:hover {background: #d3d3d3;}
+
+.modal {
+  .input-group button {
+    font-size: 0.8rem;
+    background: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    color: black;
+  }
+  .input-group button:active {
+    background: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    color: black;
+  }
+
+  .grp {
+    margin-bottom: 5px;
+  }
+  .form-label {
+    margin-bottom: 0.2rem;
+  }
+
+  .d-grid button {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}
+
+.changePwModal, .changeInfo {
+  .success {color: #41d24d; font-size: small}
+  .error {
+    color: red; font-size: small;
+  }
+  .modify_btn {border: 1px solid $test4; background: $test4;}
+  .modify_btn:hover {border: 1px solid $test1; background: $test1;}
+  .modal-header{background: $test1;}
+}
+.findId, .findPw {
+  .success {color: #41d24d; font-size: small}
+  .error {
+    color: red; font-size: small;
+  }
+  .modify_btn {border: 1px solid $test4; background: $test4;}
+  .modify_btn:hover {border: 1px solid $test1; background: $test1;}
+  .modal-header{background: $test1;}
+}
+
+.findPwError {
+  color: red;
+}
+
+// 회원 탈퇴 페이지
+.unregister {
+  padding-top: 200px;
+  .profile {
+    text-align: center;
+    background: $test3;
+    height: 300px;
+    position: relative;
+    .inside {
+      .title {
+        display: flex;
+        justify-content: center;
+      }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+    }
+    .content {
+      text-align: start;
+      .bold {
+        font-weight: bold;
+      }
+    }
+    .check {
+      display: flex;
+      justify-content: center;
+      font-size: 16px;
+      input {margin-right: 5px;}
+    }
+  }
+  .menu{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    .btn {
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 20px;
+      width: 120px;
+    }
+    .confirm {
+      background: $test4;
+      border: 1px solid $test4;
+    }
+    .confirm:hover {
+      background: #a3c7ee;
+      border: 1px solid #a3c7ee;
+    }
+    .cancel {
+      background: #838383;
+      border: 1px solid #838383;
+    }
+    .cancel:hover {
+      background: #aaaaaa;
+      border: 1px solid #aaaaaa;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .unregister {
+    .profile {
+      height: 400px;
+      .check {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 382px) {
+  .unregister {
+    .profile {
+      height: 400px;
+      .check {
+        input {zoom: 0.9;}
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.withdrawalModal {
+  .error {
+    height: 10px;
+  }
+}

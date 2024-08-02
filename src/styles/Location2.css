@@ -1,0 +1,64 @@
+/* Location2.css */
+.location2 {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  max-width: 100%; /* 부모 요소의 크기를 넘어가지 않도록 설정 */
+}
+
+/* 나머지 스타일은 그대로 유지 */
+.location2 .active {
+  background-color: #d2e0fb;
+  width: 100%;
+}
+
+.location2 a {
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 0;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* 링크의 기본 밑줄 제거 */
+  text-decoration: none; /* 링크의 기본 밑줄 제거 */
+  flex: 1;
+  box-sizing: border-box; /* 패딩과 테두리를 너비에 포함 */
+  width: 75px;
+}
+
+.location2 a:hover {
+  background-color: #e0e0e0;
+  width: 100%;
+}
+
+@media (max-width: 1700px) {
+  .location2 {
+    position: static;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .location2 a {
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* 링크의 기본 밑줄 제거 */
+    flex: 1;
+    box-sizing: border-box; /* 패딩과 테두리를 너비에 포함 */
+    width: 75px;
+  }
+}
