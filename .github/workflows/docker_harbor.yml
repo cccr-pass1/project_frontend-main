@@ -1,0 +1,78 @@
+name: CI with DevSecOps
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '17'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Static Code Analysis (ESLint)
+        run: npm run lint
+
+      - name: Dependency Review
+        uses: advanced-security/dependency-review-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Dependency Check (Snyk)
+        uses: snyk/actions/node@v1
+        with:
+          command: monitor
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Run tests
+        run: npm test
+
+      - name: Upload production-ready build files
+        if: success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: build/
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main' && success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          languages: javascript
+
+      - name: Run OWASP ZAP Security Scan
+        uses: zaproxy/action-full-scan@v0.2.0
+        with:
+          target: 'http://localhost:80'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
