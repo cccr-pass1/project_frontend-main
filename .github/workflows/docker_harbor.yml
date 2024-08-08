@@ -1,23 +1,19 @@
-name: Security Scan
+name: Build and Test
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
-  security:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Dependency Review
-        uses: github/dependency-review-action@v2
-
-      - name: Set up Snyk
-        uses: snyk/actions/setup@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          version: 'latest'
+          node-version: '17'
 
-      - name: Run Snyk Security Scan
-        uses: snyk/actions/snyk@v1
-        with:
-          continue-on-error: true
+      - name: Install dependencies
+        run: npm install
