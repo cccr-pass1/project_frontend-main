@@ -6,6 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
+      security-events: read
       actions: read
       contents: read
 
