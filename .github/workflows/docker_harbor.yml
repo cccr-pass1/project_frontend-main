@@ -17,3 +17,12 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Build and Push Docker Image
+        env:
+          HARBOR_USER: ${{ secrets.HARBOR_USER }}
+          HARBOR_PASSWORD: ${{ secrets.HARBOR_PASSWORD }}
+        run: |
+          ./gradlew bootBuildImage -x test --imageName=$IMAGE_NAME:${{ github.sha }}
+          echo $HARBOR_PASSWORD | docker login $REGISTRY -u $HARBOR_USER --password-stdin
+          docker push $IMAGE_NAME:${{ github.sha }}
